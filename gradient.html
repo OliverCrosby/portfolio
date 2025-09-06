@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Anti-Banding Techniques</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .demo-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .content {
+            position: relative;
+            z-index: 10;
+            max-width: 600px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 2rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+
+        code {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        /* Method 1: Basic gradient with banding (BAD) */
+        .banded-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        /* Method 2: Multi-stop gradient with easing (GOOD) */
+        .smooth-gradient {
+            background: linear-gradient(
+                135deg,
+                #667eea 0%,
+                #6b7dd8 10%,
+                #6f7cc6 20%,
+                #737bb4 30%,
+                #7779a2 40%,
+                #7a7690 50%,
+                #7c737e 60%,
+                #7d6f6c 70%,
+                #7c6a5a 80%,
+                #7a6548 90%,
+                #764ba2 100%
+            );
+        }
+
+        /* Method 3: Layered gradients with noise (BEST) */
+        .layered-gradient {
+            position: relative;
+            background: #667eea;
+        }
+
+        .layered-gradient::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(
+                135deg,
+                rgba(102, 126, 234, 1) 0%,
+                rgba(107, 125, 216, 0.95) 8%,
+                rgba(111, 124, 198, 0.9) 16%,
+                rgba(115, 123, 180, 0.85) 24%,
+                rgba(119, 121, 162, 0.8) 32%,
+                rgba(122, 118, 144, 0.75) 40%,
+                rgba(124, 115, 126, 0.7) 48%,
+                rgba(125, 111, 108, 0.65) 56%,
+                rgba(124, 106, 90, 0.6) 64%,
+                rgba(122, 101, 72, 0.55) 72%,
+                rgba(120, 96, 54, 0.5) 80%,
+                rgba(118, 75, 162, 0.45) 88%,
+                rgba(118, 75, 162, 0.9) 94%,
+                rgba(118, 75, 162, 1) 100%
+            );
+            mix-blend-mode: normal;
+        }
+
+        .layered-gradient::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.03;
+            mix-blend-mode: overlay;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        /* Method 4: CSS Mesh Gradient (ADVANCED) */
+        .mesh-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+        }
+
+        .mesh-gradient::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(
+                circle at 20% 80%,
+                rgba(120, 119, 198, 0.3) 0%,
+                transparent 50%
+            ),
+            radial-gradient(
+                circle at 80% 20%,
+                rgba(255, 119, 198, 0.3) 0%,
+                transparent 50%
+            ),
+            radial-gradient(
+                circle at 40% 40%,
+                rgba(255, 219, 98, 0.2) 0%,
+                transparent 50%
+            );
+            animation: meshMove 20s ease-in-out infinite;
+        }
+
+        @keyframes meshMove {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(-10px, -10px) rotate(120deg); }
+            66% { transform: translate(10px, -10px) rotate(240deg); }
+        }
+
+        /* Method 5: Canvas-based gradient with dithering */
+        .canvas-gradient {
+            position: relative;
+        }
+
+        #gradientCanvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 1rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav button {
+            display: block;
+            width: 100%;
+            padding: 0.5rem 1rem;
+            margin: 0.5rem 0;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .nav button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(-5px);
+        }
+
+        .nav button.active {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <button onclick="scrollToSection(0)" class="active">1. Banded (Bad)</button>
+        <button onclick="scrollToSection(1)">2. Multi-stop</button>
+        <button onclick="scrollToSection(2)">3. Layered + Noise</button>
+        <button onclick="scrollToSection(3)">4. Mesh Gradient</button>
+        <button onclick="scrollToSection(4)">5. Canvas Dither</button>
+    </nav>
+
+    <section class="demo-section banded-gradient" id="section-0">
+        <div class="content">
+            <h2>❌ Basic Gradient</h2>
+            <p>This shows visible banding - the problem we're trying to solve. Notice the distinct color bands, especially visible on larger screens.</p>
+            <p><code>linear-gradient(135deg, #667eea, #764ba2)</code></p>
+        </div>
+    </section>
+
+    <section class="demo-section smooth-gradient" id="section-1">
+        <div class="content">
+            <h2>✅ Multi-stop Gradient</h2>
+            <p>Adding intermediate color stops with calculated values creates smoother transitions. This reduces banding significantly.</p>
+            <p><code>10+ color stops with eased transitions</code></p>
+        </div>
+    </section>
+
+    <section class="demo-section layered-gradient" id="section-2">
+        <div class="content">
+            <h2>✨ Layered + SVG Noise</h2>
+            <p>Best CSS-only solution: Multiple gradient layers with subtle SVG noise texture. The noise breaks up any remaining banding.</p>
+            <p><code>Gradients + mix-blend-mode + SVG turbulence</code></p>
+        </div>
+    </section>
+
+    <section class="demo-section mesh-gradient" id="section-3">
+        <div class="content">
+            <h2>🎨 Mesh Gradient</h2>
+            <p>Animated radial gradients create organic, smooth color transitions. Great for dynamic backgrounds.</p>
+            <p><code>Multiple radial-gradients with animation</code></p>
+        </div>
+    </section>
+
+    <section class="demo-section canvas-gradient" id="section-4">
+        <canvas id="gradientCanvas"></canvas>
+        <div class="content">
+            <h2>🚀 Canvas Dithering</h2>
+            <p>Ultimate solution: Canvas with Floyd-Steinberg dithering algorithm. Adds controlled noise to eliminate all banding.</p>
+            <p><code>Canvas API + Dithering Algorithm</code></p>
+        </div>
+    </section>
+
+    <script>
+        // Navigation functionality
+        const sections = document.querySelectorAll('.demo-section');
+        const navButtons = document.querySelectorAll('.nav button');
+
+        function scrollToSection(index) {
+            sections[index].scrollIntoView({ behavior: 'smooth' });
+            navButtons.forEach(btn => btn.classList.remove('active'));
+            navButtons[index].classList.add('active');
+        }
+
+        // Intersection Observer for active section
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const index = Array.from(sections).indexOf(entry.target);
+                    navButtons.forEach(btn => btn.classList.remove('active'));
+                    if (navButtons[index]) {
+                        navButtons[index].classList.add('active');
+                    }
+                }
+            });
+        }, { threshold: 0.5 });
+
+        sections.forEach(section => observer.observe(section));
+
+        // Canvas gradient with dithering
+        const canvas = document.getElementById('gradientCanvas');
+        const ctx = canvas.getContext('2d');
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            drawDitheredGradient();
+        }
+
+        function drawDitheredGradient() {
+            const width = canvas.width;
+            const height = canvas.height;
+            
+            // Create gradient
+            const gradient = ctx.createLinearGradient(0, 0, width, height);
+            gradient.addColorStop(0, '#667eea');
+            gradient.addColorStop(0.1, '#6b7dd8');
+            gradient.addColorStop(0.2, '#6f7cc6');
+            gradient.addColorStop(0.3, '#737bb4');
+            gradient.addColorStop(0.4, '#7779a2');
+            gradient.addColorStop(0.5, '#7a7690');
+            gradient.addColorStop(0.6, '#7c737e');
+            gradient.addColorStop(0.7, '#7d6f6c');
+            gradient.addColorStop(0.8, '#7c6a5a');
+            gradient.addColorStop(0.9, '#7a6548');
+            gradient.addColorStop(1, '#764ba2');
+            
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, width, height);
+            
+            // Apply dithering
+            const imageData = ctx.getImageData(0, 0, width, height);
+            const pixels = imageData.data;
+            
+            // Floyd-Steinberg dithering
+            for (let y = 0; y < height; y++) {
+                for (let x = 0; x < width; x++) {
+                    const idx = (y * width + x) * 4;
+                    
+                    // Add subtle noise
+                    const noise = (Math.random() - 0.5) * 3;
+                    pixels[idx] = Math.min(255, Math.max(0, pixels[idx] + noise));
+                    pixels[idx + 1] = Math.min(255, Math.max(0, pixels[idx + 1] + noise));
+                    pixels[idx + 2] = Math.min(255, Math.max(0, pixels[idx + 2] + noise));
+                }
+            }
+            
+            ctx.putImageData(imageData, 0, 0);
+        }
+
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        // Add some interactivity
+        canvas.addEventListener('mousemove', (e) => {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            
+            const overlay = ctx.createRadialGradient(
+                e.clientX, e.clientY, 0,
+                e.clientX, e.clientY, 200
+            );
+            overlay.addColorStop(0, 'rgba(255, 255, 255, 0.1)');
+            overlay.addColorStop(1, 'transparent');
+            
+            drawDitheredGradient();
+            ctx.fillStyle = overlay;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+        });
+    </script>
+</body>
+</html>

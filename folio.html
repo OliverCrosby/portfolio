@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oliver Crosby | Digital Sociologist & UX Designer</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Sora:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'heading': ['Sora', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand-dark': '#0f172a', // slate-900
+                        'brand-light': '#f1f5f9', // slate-100
+                        'brand-muted': '#94a3b8', // slate-400
+                        'brand-accent-cyan': '#22d3ee',
+                        'brand-accent-red': '#ef4444',
+                        'brand-accent-yellow': '#facc15',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom gradient background */
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(to bottom, #0f172a 0%, #0f1116 8000px);
+            background-image: url("grad.png");
+            background-size: auto 8000px;
+            background-repeat: repeat-x;
+            background-color: #0f1116;
+            min-height: 100vh;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Sora', sans-serif;
+            font-weight: 500;
+        }
+    </style>
+
+</head>
+
+<body class="text-brand-muted antialiased text-lg">
+
+    <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 py-8 sm:py-12 lg:py-20">
+
+        <header class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-12 items-center">
+            <div class="lg:col-span-1">
+                <img src="me.png"
+                    alt="Photo of a man (me) in an elevator taking a mirror selfie. He's wearing headphones, an orange/salmon colored t-shirt, khaki shorts, white crew socks, and dark slip-on shoes. The elevator has a modern design with mirrored walls, white interior panels, and what appears to be floor indicators with red numbers visible in the reflection. He's holding a phone to capture the photo."
+                    class="rounded-lg shadow-2xl shadow-cyan-900/20 object-cover w-full h-auto max-w-md mx-auto lg:max-w-none">
+            </div>
+
+            <div class="lg:col-span-2">
+                <h1
+                    class="font-heading text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-r from-brand-accent-yellow to-brand-accent-red bg-clip-text text-transparent">
+                    Oliver Crosby
+                </h1>
+                <h2 class="font-heading text-lg sm:text-xl lg:text-2xl text-brand-accent-cyan mt-2">
+                    Digital Sociologist
+                </h2>
+                <p class="mt-4 text-base sm:text-lg lg:text-xl leading-relaxed">
+                    I'm a Digital Sociologist with 10+ years of experience building technology solutions for
+                    mission-driven organizations. Currently working as a UX Designer and Policy Analyst to bridge the
+                    gap between human behavior and digital systems.
+                </p>
+                <div class="mt-6 flex flex-col sm:flex-row gap-3 sm:gap-4">
+                    <a href="#contact"
+                        class="bg-brand-accent-red text-white font-bold py-2.5 px-6 rounded-md hover:bg-red-500 transition-colors duration-300 text-center">
+                        Get in Touch
+                    </a>
+                    <a href="#projects"
+                        class="border border-brand-muted text-brand-muted font-bold py-2.5 px-6 rounded-md hover:bg-slate-800 hover:text-white transition-colors duration-300 text-center">
+                        View Projects
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <main class="mt-16 sm:mt-20 lg:mt-28">
+
+<section id="projects">
+    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-brand-accent-cyan">Projects</h2>
+    <div class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+
+        <a href="#case-study"
+            class="block bg-slate-800/50 p-6 lg:p-8 rounded-lg border border-slate-700 hover:border-brand-accent-cyan transition-colors duration-300 group">
+            <h3
+                class="text-lg sm:text-xl lg:text-2xl font-heading text-slate-200 group-hover:text-brand-accent-cyan transition-colors duration-300">
+                Driving Adoption for Canada's COVID-19 Travel App (ArriveCAN)</h3>
+            <p class="mt-3 text-sm sm:text-base text-brand-muted">Led UX research to drive app adoption from 13% to
+                80% before it was mandatory. Overcame significant bureaucratic hurdles by using data from 1,700+
+                user surveys and usability testing to champion critical, user-focused improvements.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+                <span class="text-xs bg-cyan-900/50 text-brand-accent-cyan py-1 px-3 rounded-full">UX Research</span>
+                <span class="text-xs bg-slate-700 text-slate-300 py-1 px-3 rounded-full">User Testing</span>
+                <span class="text-xs bg-slate-700 text-slate-300 py-1 px-3 rounded-full">Data Analysis</span>
+                <span class="text-xs bg-slate-700 text-slate-300 py-1 px-3 rounded-full">Government UX</span>
+            </div>
+        </a>
+
+        <a href="#comfyui-minimap"
+            class="block bg-slate-800/50 p-6 lg:p-8 rounded-lg border border-slate-700 hover:border-brand-accent-cyan transition-colors duration-300 group">
+            <h3
+                class="text-lg sm:text-xl lg:text-2xl font-heading text-slate-200 group-hover:text-brand-accent-cyan transition-colors duration-300">
+                ComfyUI Minimap: Simplifying AI Workflow Navigation</h3>
+            <p class="mt-3 text-sm sm:text-base text-brand-muted">Developed an open-source minimap plugin to solve
+                spatial navigation issues in a popular node-based AI interface. The community-adopted tool provides
+                essential context for complex workflows, inspired by RTS game design.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+                <span class="text-xs bg-cyan-900/50 text-brand-accent-cyan py-1 px-3 rounded-full">UX Design</span>
+                <span class="text-xs bg-slate-700 text-slate-300 py-1 px-3 rounded-full">JavaScript</span>
+                <span class="text-xs bg-slate-700 text-slate-300 py-1 px-3 rounded-full">Open Source</span>
+                <span class="text-xs bg-slate-700 text-slate-300 py-1 px-3 rounded-full">AI Tools</span>
+            </div>
+        </a>
+
+        <a href="#image-sorter"
+            class="block bg-slate-800/50 p-6 lg:p-8 rounded-lg border border-slate-700 hover:border-brand-accent-cyan transition-colors duration-300 group">
+            <h3
+                class="text-lg sm:text-xl lg:text-2xl font-heading text-slate-200 group-hover:text-brand-accent-cyan transition-colors duration-300">
+                Image Sorter: Streamlining High-Volume Manual Tasks</h3>
+            <p class="mt-3 text-sm sm:text-base text-brand-muted">Built a custom Flask tool to accelerate the
+                manual sorting of thousands of images. The interface prioritizes keyboard shortcuts and
+                customizable workflows to reduce fatigue and errors in repetitive data classification tasks.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+                <span class="text-xs bg-cyan-900/50 text-brand-accent-cyan py-1 px-3 rounded-full">Tool
+                    Development</span>
+                <span class="text-xs bg-slate-700 text-slate-300 py-1 px-3 rounded-full">Python</span>
+                <span class="text-xs bg-slate-700 text-slate-300 py-1 px-3 rounded-full">Flask</span>
+                <span class="text-xs bg-slate-700 text-slate-300 py-1 px-3 rounded-full">Workflow Automation</span>
+            </div>
+        </a>
+
+        <a href="#data-strategy-website"
+            class="block bg-slate-800/50 p-6 lg:p-8 rounded-lg border border-slate-700 hover:border-brand-accent-cyan transition-colors duration-300 group">
+            <h3
+                class="text-lg sm:text-xl lg:text-2xl font-heading text-slate-200 group-hover:text-brand-accent-cyan transition-colors duration-300">
+                Data Strategy Website: From Concept to Launch</h3>
+            <p class="mt-3 text-sm sm:text-base text-brand-muted">Led the end-to-end creation of a government data
+                strategy website under a tight 3-week deadline. Managed stakeholders, designed UI/UX in Figma, and
+                developed the final static site, successfully launching a key public communication platform on
+                time.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+                <span class="text-xs bg-cyan-900/50 text-brand-accent-cyan py-1 px-3 rounded-full">Project
+                    Management</span>
+                <span class="text-xs bg-slate-700 text-slate-300 py-1 px-3 rounded-full">UX Design</span>
+                <span class="text-xs bg-slate-700 text-slate-300 py-1 px-3 rounded-full">Web Development</span>
+                <span class="text-xs bg-slate-700 text-slate-300 py-1 px-3 rounded-full">Stakeholder Management</span>
+            </div>
+        </a>
+
+    </div>
+</section>
+
+            <section id="case-study" class="mt-16 sm:mt-20 lg:mt-28">
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-brand-accent-cyan">
+                    ArriveCAN: Fighting for Users Inside a Bureaucratic Nightmare
+                </h2>
+
+                <div class="mt-8 space-y-6 lg:space-y-8">
+                    <h3 class="text-lg sm:text-xl lg:text-2xl font-heading text-slate-200 mb-4">The Real Story</h3>
+                    <p class="text-sm sm:text-base lg:text-lg text-brand-muted leading-relaxed">
+                        Let me be honest about ArriveCAN. You probably remember it as that app everyone hated during
+                        COVID. The one that became a political punching bag. It had serious
+                        problems. But MY role in the project tells a story of success, so I'm going to tell it anyway!
+                        Here's what actually happened behind the scenes: I joined a project where the government
+                        contracted devs who didn't even know what the Web Experience Toolkit was (that's like a web
+                        developer not knowing HTML). Despite fighting through 50+ layers of bureaucracy just to get a
+                        single change request to the dev team, I managed to drive adoption from 13% to 80% <b>before</b>
+                        they made the app mandatory. This is how I did it.
+                    </p>
+
+                    <h3 class="text-lg sm:text-xl lg:text-2xl font-heading text-slate-200 mb-4">The Challenge (The
+                        Official Version vs Reality)</h3>
+                    <p class="text-sm sm:text-base lg:text-lg text-brand-muted leading-relaxed mb-4">
+                        <span class="font-semibold text-brand-accent-yellow">Official version:</span> "Increase digital
+                        adoption to streamline border processing."
+                    </p>
+                    <p class="text-sm sm:text-base lg:text-lg text-brand-muted leading-relaxed mb-4">
+                        <span class="font-semibold text-brand-accent-cyan">Reality:</span> I was brought in for "quality
+                        assurance" but quickly discovered the app had fundamental UX problems that QA alone couldn't
+                        fix. Although we (my team at PHAC) didn't know it at the time, the
+                        development had been outsourced to <hidden>incompetent</hidden> contractors who <hidden>had to
+                            Google basic government web
+                            standards</hidden> apparently had very little experience developing apps. Every fix required
+                        approval from dozens of bureaucrats who'd never used the app
+                        themselves. So my primary challenge was finding minimal changes with maximum impact and then
+                        fighting to get them through a bureaucratic machine to the fabled 'dev' team that I never
+                        actually met.
+                    </p>
+
+                    <h3 class="text-lg sm:text-xl lg:text-2xl font-heading text-slate-200 mb-4">What I Actually Did (And
+                        Got Done)</h3>
+                    <p class="text-sm sm:text-base lg:text-lg text-brand-muted leading-relaxed mb-4">
+                        Despite the dysfunction, I carved out space to do real UX research. I surveyed 1,719 travelers,
+                        conducted usability testing, and built data visualizations that even bureaucrats couldn't
+                        ignore. My role officially stayed "policy analyst" (government job titles are vague like that),
+                        but I became
+                        the de facto UX lead because nobody else was asking basic questions like "can users actually
+                        complete this form?"
+                    </p>
+
+                    <h3 class="text-lg sm:text-xl lg:text-2xl font-heading text-slate-200 mb-4">Key Insights From My
+                        Research</h3>
+                    <p class="text-sm sm:text-base lg:text-lg text-brand-muted leading-relaxed mb-4">
+                        Check out <a
+                            href="https://public.tableau.com/profile/oliver1831#!/vizhome/UserFeedbackSurvey/UserFeedbackSurveyResults?publish=yes"
+                            class="font-medium text-brand-accent-cyan hover:underline">the Tableau dashboard I built</a>
+                        to see the full analysis. The data told a clear story:
+                    </p>
+
+                    <img src="image6.png"
+                        alt="User distribution showing only 13% using the app, with 44% unaware of its existence"
+                        class="shadow-2xl shadow-cyan-900/20 h-auto max-w-2xl mb-6">
+
+                    <div class="bg-slate-800/50 p-4 rounded-lg border-l-4 border-brand-accent-yellow mb-6">
+                        <p class="text-sm sm:text-base text-brand-light">
+                            <span class="font-bold">The shocking finding:</span> 44% of travelers had never even heard
+                            of ArriveCAN. Not "chose not to use it"—literally didn't know it existed. Meanwhile, another
+                            31% knew about it but chose paper because the app seemed harder. This wasn't a technology
+                            problem; it was a massive communication and design failure.
+                        </p>
+                    </div>
+
+                    <img src="image3.png" alt="Discovery channels showing 43.5% never learned about ArriveCAN"
+                        class="shadow-2xl shadow-cyan-900/20 h-auto max-w-2xl mb-6">
+
+                    <img src="image7.png"
+                        alt="Reasons why app-aware users chose paper, with 'Paper seemed easier' at 39%"
+                        class="shadow-2xl shadow-cyan-900/20 h-auto max-w-2xl mb-6">
+
+                    <h3 class="text-lg sm:text-xl lg:text-2xl font-heading text-slate-200 mb-4">The Critical Issues I
+                        Found (That Never Got Fixed)</h3>
+
+                    <div class="space-y-4 mb-6">
+                        <div class="bg-red-900/20 border-l-4 border-red-500 p-4 rounded">
+                            <p class="text-sm sm:text-base text-brand-light">
+                                <span class="font-bold text-red-400">Account creation disaster:</span> 11 out of 20 test
+                                users couldn't find the "Create Account" link. It was buried below the login button.
+                                Basic UX 101 failure.
+                            </p>
+                        </div>
+                        <div class="bg-red-900/20 border-l-4 border-red-500 p-4 rounded">
+                            <p class="text-sm sm:text-base text-brand-light">
+                                <span class="font-bold text-red-400">WCAG violations everywhere:</span> Full-width text
+                                on desktop (unreadable for low vision users), missing radio buttons for screen readers,
+                                navigation that would accidentally sign users out mid-form.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-lg sm:text-xl lg:text-2xl font-heading text-slate-200 mb-4">What I Actually Achieved
+                    </h3>
+
+                    <p class="text-sm sm:text-base lg:text-lg text-brand-muted leading-relaxed mb-4">
+                        Despite all the bureaucratic roadblocks, I did drive real change:
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                        <div class="bg-green-900/30 border border-green-500/30 p-4 rounded">
+                            <div class="text-brand-accent-cyan font-bold text-2xl">13% → 80%</div>
+                            <div class="text-brand-light mt-2">App adoption before the app was mandatory (yes, really)
+                            </div>
+                        </div>
+                        <div class="bg-green-900/30 border border-green-500/30 p-4 rounded">
+                            <div class="text-brand-accent-yellow font-bold text-2xl">1,719</div>
+                            <div class="text-brand-light mt-2">Users surveyed for actionable insights</div>
+                        </div>
+                        <div class="bg-green-900/30 border border-green-500/30 p-4 rounded">
+                            <div class="text-brand-accent-red font-bold text-2xl">23 → 12</div>
+                            <div class="text-brand-light mt-2">Steps reduced in user flow (when they listened)</div>
+                        </div>
+                        <div class="bg-green-900/30 border border-green-500/30 p-4 rounded">
+                            <div class="text-brand-accent-green font-bold text-2xl">7</div>
+                            <div class="text-brand-light mt-2">Languages supported after my push</div>
+                        </div>
+                    </div>
+
+                    <p class="text-sm sm:text-base lg:text-lg text-brand-muted leading-relaxed mb-4">
+                        The adoption increase happened because I bypassed the bureaucracy where I could. I worked
+                        directly with airlines to get ArriveCAN mentioned in booking emails. I got QR codes added to
+                        airport signage. I pushed for simplified forms that actually worked on phones. Every small win
+                        required enormous effort, but they added up.
+                    </p>
+
+                    <h3 class="text-lg sm:text-xl lg:text-2xl font-heading text-slate-200 mb-4">The Bitter Truth</h3>
+                    <p class="text-sm sm:text-base lg:text-lg text-brand-muted leading-relaxed mb-4">
+                        Once the government made the app mandatory, they basically stopped listening to user feedback.
+                        My carefully documented accessibility violations? Ignored. The critical usability issues? "Not a
+                        priority." The bureaucrats got their compliance numbers and stopped caring about user
+                        experience. <hidden>The contractors kept getting paid despite their incompetence.</hidden> And
+                        ArriveCAN became
+                        the controvercial app you remember (if you ever used it, or read about it in the news).
+                    </p>
+
+                    <p class="text-sm sm:text-base lg:text-lg text-brand-muted leading-relaxed mb-4">
+                        But here's what I learned: even in the most dysfunctional environment, good UX research can
+                        drive real change. I couldn't fix everything, but I made life easier for millions
+                        of travelers during a global pandemic. And I have the data to prove it.
+                    </p>
+
+                    <div
+                        class="bg-gradient-to-r from-brand-accent-cyan/10 to-brand-accent-yellow/10 p-6 rounded-lg border-l-4 border-brand-accent-cyan">
+                        <h3 class="text-lg font-heading text-slate-200 mb-3">Why This Matters for AI Tool Design</h3>
+                        <p class="text-sm sm:text-base text-brand-muted leading-relaxed mb-3">
+                            ArriveCAN taught me how to fight for users when the organization doesn't want to listen.
+                            That 44% who never heard of the app? That's exactly like mainstream users who don't know AI
+                            tools could help them. The 31% who thought paper was easier? That's your AI-skeptical users
+                            who need convincing that new technology is worth their time.
+                        </p>
+                        <p class="text-sm sm:text-base text-brand-muted leading-relaxed">
+                            Most importantly, this project taught me that real user adoption comes from obsessive
+                            attention to actual user needs, not what stakeholders think users need. When Mozilla says
+                            they want to bring AI to the masses while respecting privacy and user autonomy, I know
+                            exactly what that fight looks like. I've been in those meetings where everyone wants to take
+                            shortcuts on accessibility. I've pushed back when "good enough" meant excluding vulnerable
+                            users. And I've proven I can drive adoption even when half the organization is working
+                            against me.
+                        </p>
+                    </div>
+
+                    <div class="mt-8 p-4 bg-slate-800/50 rounded-lg border border-slate-600">
+                        <p class="text-xs sm:text-sm text-slate-400 italic">
+                            Note: All data and findings presented here are from public government sources or anonymized
+                            research I conducted. No confidential information has been disclosed. The views expressed
+                            are my own professional observations.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section id="comfyui-minimap" class="mt-16 sm:mt-20 lg:mt-28">
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-brand-accent-cyan">
+                    ComfyUI Minimap: Simplifying AI Workflow Navigation
+                </h2>
+
+                <div class="mt-8 space-y-6 lg:space-y-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                        <div class="lg:col-span-2">
+                            <h3 class="text-lg sm:text-xl lg:text-2xl font-heading text-slate-200 mb-4">The Problem</h3>
+                            <p class="text-sm sm:text-base lg:text-lg text-brand-muted leading-relaxed mb-6">
+                                ComfyUI is a powerful node-based interface for Stable Diffusion workflows, but as
+                                workflows grow increasingly complex, users struggle with spatial navigation. Working on
+                                elaborate image generation pipelines, I found myself constantly lost in sprawling node
+                                graphs -a problem shared by the entire ComfyUI community.
+                            </p>
+
+                            <h3 class="text-lg sm:text-xl lg:text-2xl font-heading text-slate-200 mb-4">The Solution
+                            </h3>
+                            <p class="text-sm sm:text-base lg:text-lg text-brand-muted leading-relaxed mb-6">
+                                Drawing inspiration from RTS game design, I created a minimalist minimap overlay that
+                                provides instant spatial context without disrupting the workflow. The design prioritizes
+                                clarity and performance, rendering hundreds of nodes in real-time while maintaining a
+                                lightweight footprint.
+                            </p>
+
+                            <img src="image1.png"
+                                alt="screenshot of the minimap. Focus is on the corner of comfyui. Minimap shows notes and connections in a small, simplified window, and a rectangle showing your view on the workflow."
+                                class="shadow-2xl shadow-cyan-900/20 h-auto max-w-2xl mb-4">
+
+                            <div class="bg-slate-700/50 p-6 rounded-lg">
+                                <h4 class="text-brand-accent-yellow font-bold mb-3">Key Design Decisions</h4>
+                                <ul class="space-y-2 text-sm sm:text-base text-brand-light">
+                                    <li class="flex items-start">
+                                        <span class="text-brand-accent-cyan mr-2">•</span>
+                                        <span><strong>Minimal visual hierarchy:</strong> Simplified node representation
+                                            to reduce cognitive load</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-brand-accent-cyan mr-2">•</span>
+                                        <span><strong>Smart positioning:</strong> Non-intrusive corner placement with
+                                            collision detection</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-brand-accent-cyan mr-2">•</span>
+                                        <span><strong>Progressive disclosure:</strong> Hide/show toggle for
+                                            uninterrupted focus work</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-brand-accent-cyan mr-2">•</span>
+                                        <span><strong>Performance-first:</strong> Optimized rendering for complex
+                                            workflows with 500+ nodes</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="space-y-6">
+                            <div
+                                class="bg-gradient-to-br from-slate-700/50 to-slate-800/50 p-6 rounded-lg border border-brand-accent-cyan/20">
+                                <h4 class="text-brand-accent-cyan font-bold mb-4">Impact & Adoption</h4>
+                                <div class="space-y-4">
+                                    <div>
+                                        <div class="text-2xl font-bold text-brand-accent-yellow">99+</div>
+                                        <div class="text-sm text-brand-muted">GitHub stars</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-2xl font-bold text-brand-accent-green">Official</div>
+                                        <div class="text-sm text-brand-muted">Community node inclusion</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-2xl font-bold text-brand-accent-red">Feedback</div>
+                                        <div class="text-sm text-brand-muted mb-2">"This is the 2nd thing I install
+                                            after Manager in a new install. Absolutely essential for user experience"
+                                        </div>
+                                        <div class="text-sm text-brand-muted">"You have no idea how incredibly useful
+                                            this is with AP Workflow. Thank you so much"</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-slate-700/30 p-4 rounded-lg">
+                                <h4 class="text-sm font-bold text-brand-accent-cyan mb-2">Open Source</h4>
+                                <a href="https://github.com/OliverCrosby/Comfyui-Minimap"
+                                    class="text-sm text-brand-accent-cyan hover:underline inline-flex items-center">
+                                    View on GitHub
+                                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-gradient-to-r from-brand-accent-cyan/10 to-brand-accent-yellow/10 p-6 rounded-lg border-l-4 border-brand-accent-cyan">
+                        <h3 class="text-lg font-heading text-slate-200 mb-3">Why This Matters for AI Tool Design</h3>
+                        <p class="text-sm sm:text-base text-brand-muted leading-relaxed">
+                            This project demonstrates my ability to identify and solve real UX problems in AI interfaces
+                            through direct usage and community engagement. By contributing to open-source AI tools, I
+                            stay current with how practitioners actually work with AI, understanding pain points that
+                            only emerge at scale. The minimap's success shows how traditional UX patterns can elegantly
+                            solve new problems in AI workflows—exactly the kind of innovative yet grounded thinking
+                            needed for Firefox's AI-powered features.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="image-sorter" class="mt-16 sm:mt-20 lg:mt-28">
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-brand-accent-cyan">
+                    Image Sorter: Streamlining High-Volume Manual Tasks
+                </h2>
+
+                <div class="mt-8 space-y-6 lg:space-y-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                        <div class="lg:col-span-2">
+                            <h3 class="text-lg sm:text-xl lg:text-2xl font-heading text-slate-200 mb-4">The Problem</h3>
+                            <p class="text-sm sm:text-base lg:text-lg text-brand-muted leading-relaxed mb-6">
+                                Manually sorting through thousands of images is tedious and time-consuming,
+                                requiring repetitive decisions and actions that quickly lead to fatigue and errors.
+                            </p>
+
+                            <h3 class="text-lg sm:text-xl lg:text-2xl font-heading text-slate-200 mb-4">The Solution
+                            </h3>
+                            <p class="text-sm sm:text-base lg:text-lg text-brand-muted leading-relaxed mb-6">
+                                I built a Flask-based single-interface tool that allows users to add custom sorting
+                                options and modifications, dramatically speeding up the image organization process. The
+                                interface focuses on keyboard-driven interactions and customizable workflows to minimize
+                                friction.
+                            </p>
+
+                            <img src="img-sort.png"
+                                alt="A screenshot displaying an image sorting interface showing a winter landscape artwork featuring a rocky island or outcrop with orange-brown stone formations crowned by dark evergreen trees and a tall stone tower structure, set against a bright blue sky with white clouds. In the foreground, white snow covers the ground with meandering blue water channels cutting through it. The right panel shows a dark interface for sorting image 3 of 401, with various category tags including 'Open with Photoshop,' 'General (Q),' 'Neednames (R),' 'inpaint needed (T),' and 'Needs work (W),' along with file path information indicating this is part of a batch processing workflow from August 2025."
+                                class="shadow-2xl shadow-cyan-900/20 h-auto max-w-2xl mb-4">
+
+                            <div class="bg-slate-700/50 p-6 rounded-lg">
+                                <h4 class="text-brand-accent-yellow font-bold mb-3">Key Design Decisions</h4>
+                                <ul class="space-y-2 text-sm sm:text-base text-brand-light">
+                                    <li class="flex items-start">
+                                        <span class="text-brand-accent-cyan mr-2">•</span>
+                                        <span><strong>Single interface focus:</strong> Uninterrupted workflow design
+                                            prevents context switching</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-brand-accent-cyan mr-2">•</span>
+                                        <span><strong>Keyboard-first interaction:</strong> Hotkeys for rapid image
+                                            processing and sorting</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-brand-accent-cyan mr-2">•</span>
+                                        <span><strong>Customizable categories:</strong> User-defined sorting options
+                                            adapt to specific workflows</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-brand-accent-cyan mr-2">•</span>
+                                        <span><strong>Lightweight architecture:</strong> Flask-based local operation
+                                            with minimal resource usage</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="space-y-6">
+                            <div
+                                class="bg-gradient-to-br from-slate-700/50 to-slate-800/50 p-6 rounded-lg border border-brand-accent-cyan/20">
+                                <h4 class="text-brand-accent-cyan font-bold mb-4">Key Features</h4>
+                                <div class="space-y-4">
+                                    <div>
+                                        <div class="text-2xl font-bold text-brand-accent-yellow">Single Interface</div>
+                                        <div class="text-sm text-brand-muted">Uninterrupted workflow design</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-2xl font-bold text-brand-accent-green">Customizable</div>
+                                        <div class="text-sm text-brand-muted">Sorting categories and actions</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-2xl font-bold text-brand-accent-red">Shortcuts</div>
+                                        <div class="text-sm text-brand-muted">Keyboard shortcuts for rapid processing
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="text-2xl font-bold text-brand-accent-cyan">Flask-based</div>
+                                        <div class="text-sm text-brand-muted">Lightweight, local operation</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-slate-700/30 p-4 rounded-lg">
+                                <h4 class="text-sm font-bold text-brand-accent-cyan mb-2">Open Source</h4>
+                                <a href="https://github.com/OliverCrosby/Image-sorter"
+                                    class="text-sm text-brand-accent-cyan hover:underline inline-flex items-center">
+                                    View on GitHub
+                                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-gradient-to-r from-brand-accent-cyan/10 to-brand-accent-yellow/10 p-6 rounded-lg border-l-4 border-brand-accent-cyan">
+                        <h3 class="text-lg font-heading text-slate-200 mb-3">Why This Matters for AI Tool Design</h3>
+                        <p class="text-sm sm:text-base text-brand-muted leading-relaxed">
+                            This project exemplifies designing for repetitive, high-volume tasks—a core challenge in AI
+                            interfaces where users process large datasets or review AI-generated content. The
+                            single-interface approach with customizable actions demonstrates understanding of workflow
+                            efficiency and cognitive load reduction, principles critical for AI tools where users need
+                            to quickly validate, sort, or refine outputs at scale.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="case-study" class="mt-16 sm:mt-20 lg:mt-28">
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-brand-accent-cyan">
+                    Data Strategy Website: Making Strategy Documents People Actually Use</h2>
+
+                <div class="mt-8 space-y-6 lg:space-y-8">
+                    <h3 class="text-lg sm:text-xl lg:text-2xl font-heading text-slate-200 mb-4 ml-0">Project Overview
+                    </h3>
+                    <p class="text-sm sm:text-base lg:text-lg text-brand-muted leading-relaxed">
+                        Transformed the Public Health Agency's first Data Strategy from a traditional 50-page PDF into
+                        an interactive, exploratory website. Government strategy documents typically achieve less than
+                        10% engagement. Our interactive website reached 85% content engagement by reimagining how staff
+                        interact with strategic guidance.
+                    </p>
+
+                    <h3 class="text-lg sm:text-xl lg:text-2xl font-heading text-slate-200 mb-4">The Challenge</h3>
+                    <p class="text-sm sm:text-base lg:text-lg text-brand-muted leading-relaxed mb-4">
+                        Staff needed strategic guidance but lacked time to read lengthy PDFs. Traditional strategy
+                        documents were linear, text-heavy, and disconnected from daily workflows. The agency needed a
+                        way to make strategic information discoverable, actionable, and relevant to diverse roles across
+                        15 departments.
+                    </p>
+
+                    <h3 class="text-lg sm:text-xl lg:text-2xl font-heading text-slate-200 mb-4">My Role & Approach</h3>
+                    <p class="text-sm sm:text-base lg:text-lg text-brand-muted leading-relaxed mb-4">
+                        I led the end-to-end design and development of the interactive strategy website. After
+                        facilitating organization-wide consultations and conducting the initial research that shaped the
+                        strategy content, I analyzed 47 similar government documents, interviewed staff across
+                        departments to understand consumption patterns, and designed a question-based information
+                        architecture that crossed traditional document boundaries.
+                    </p>
+
+                    <h3 class="text-lg sm:text-xl lg:text-2xl font-heading text-slate-200 mb-4">Key Insights</h3>
+
+                    <div class="bg-slate-700/50 p-6 rounded-lg mb-6">
+                        <h4 class="text-brand-accent-cyan font-bold mb-3">Information Architecture Innovation</h4>
+                        <p class="text-sm text-brand-muted mb-4">
+                            Instead of forcing users through linear document structure, I organized content around the
+                            questions they actually ask:
+                        </p>
+                        <ul class="space-y-2 text-sm text-brand-light">
+                            <li>• "What does this mean for my role?"</li>
+                            <li>• "What do I need to do this quarter?"</li>
+                            <li>• "How does this connect to other initiatives?"</li>
+                            <li>• "What resources are available?"</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-slate-700/50 p-6 rounded-lg">
+                        <h4 class="text-brand-accent-yellow font-bold mb-3">Progressive Disclosure Design</h4>
+                        <p class="text-sm text-brand-muted">
+                            Created modular content blocks with multiple access paths through a sophisticated tagging
+                            system. Users could explore strategy elements based on their role, department, timeline, or
+                            specific project needs—finding relevant information 3x faster than traditional navigation.
+                        </p>
+                    </div>
+
+                    <h3 class="text-lg sm:text-xl lg:text-2xl font-heading text-slate-200 mb-4 mt-6">Design Solutions
+                    </h3>
+                    <p class="text-sm sm:text-base lg:text-lg text-brand-muted leading-relaxed mb-4">
+                        Developed a "choose your own adventure" approach to complex policy areas using GitHub Pages
+                        within government infrastructure constraints. Built reusable template system adopted by other
+                        departments. Implemented visual flows connecting high-level goals to specific tasks, making
+                        abstract strategy concrete and actionable.
+                    </p>
+
+                    <img src="image5.png"
+                        alt="A website screenshot showing the Public Health Agency of Canada's Data Strategy document layout. The page features a dark blue header with the title 'DATA STRATEGY' and subtitle 'Building a foundation for the future of public health data' alongside geometric icons representing databases and buildings. The main content area has a teal gradient background and is divided into three main sections: Overview, Elements, and Implementation Plan. Each section contains placeholder Lorem ipsum text. On the right side is a vertical navigation menu with icons and labels including Intro, Vision, What We Heard, and Targets. The overall design uses a modern blue and teal color scheme with clean typography and geometric design elements throughout."
+                        class="shadow-2xl shadow-cyan-900/20 h-auto max-w-2xl">
+                    <p class="text-xs text-slate-400 italic mb-6">Note: this was an early draft before we made the text
+                        accessible, the background is obviously too bright. I fixed that in the final version, I just
+                        couldn't find a better screenshot! They made a new strategy years later, and it was a
+                        document... that nobody actually read.</p>
+
+
+                    <h3 class="text-lg sm:text-xl lg:text-2xl font-heading text-slate-200 mb-4">Impact & Results</h3>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-6">
+                        <div class="bg-slate-700/50 p-4 rounded">
+                            <div class="text-brand-accent-cyan font-bold text-2xl">85%</div>
+                            <div class="text-brand-light mt-2">content engagement (vs. 10% for PDF version)</div>
+                        </div>
+                        <div class="bg-slate-700/50 p-4 rounded">
+                            <div class="text-brand-accent-yellow font-bold text-2xl">67%</div>
+                            <div class="text-brand-light mt-2">return visitor rate indicating ongoing utility</div>
+                        </div>
+                        <div class="bg-slate-700/50 p-4 rounded">
+                            <div class="text-brand-accent-red font-bold text-2xl">3x</div>
+                            <div class="text-brand-light mt-2">faster information discovery vs. traditional navigation
+                            </div>
+                        </div>
+                        <div class="bg-slate-700/50 p-4 rounded">
+                            <div class="text-brand-accent-green font-bold text-2xl">15 min</div>
+                            <div class="text-brand-light mt-2">average session time showing deep engagement</div>
+                        </div>
+                    </div>
+
+                    <p class="text-sm sm:text-base lg:text-lg text-brand-muted leading-relaxed">
+                        This was the first government strategy document that staff reported actually using in their
+                        daily work. The modular design system became a template for other departments' digital strategy
+                        implementations. We had departments reaching out to see how we did it!
+                    </p>
+
+                    <div
+                        class="bg-gradient-to-r from-brand-accent-cyan/10 to-brand-accent-yellow/10 p-6 rounded-lg border-l-4 border-brand-accent-cyan mt-6">
+                        <h3 class="text-lg font-heading text-slate-200 mb-3">Why This Matters for AI Tool Design</h3>
+                        <p class="text-sm sm:text-base text-brand-muted leading-relaxed">
+                            This project demonstrates my ability to transform complex, abstract concepts into intuitive,
+                            actionable interfaces—exactly what's needed for AI features in Firefox. The challenge of
+                            making government strategy accessible parallels making AI capabilities understandable and
+                            trustworthy for mainstream users. My approach of question-based navigation and progressive
+                            disclosure directly applies to designing AI interfaces that adapt to user expertise levels.
+                            Most importantly, achieving 85% engagement with traditionally ignored content proves I can
+                            drive adoption of new technologies through thoughtful information architecture and
+                            user-centered design.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="contact" class="mt-16 sm:mt-20 lg:mt-28 text-center">
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-brand-accent-cyan">Contact</h2>
+                <p class="mt-4 max-w-2xl mx-auto text-sm sm:text-base lg:text-lg">
+                    I'm always interested in new projects and collaborations. If you'd like to discuss an opportunity or
+                    just say hello, feel free to reach out.
+                </p>
+                <div class="mt-8">
+                    <a href="mailto:247gbi4dy@mozmail.com"
+                        class="inline-block bg-brand-accent-red text-white text-base sm:text-lg font-bold py-3 px-8 rounded-md hover:bg-red-500 transition-colors duration-300">
+                        Email Me
+                    </a>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="mt-16 sm:mt-20 lg:mt-28 pt-8 border-t border-slate-800 text-center text-sm text-slate-500">
+            <p>&copy; 2025 Oliver Crosby. All Rights Reserved.</p>
+        </footer>
+
+    </div>
+</body>
+
+</html>
