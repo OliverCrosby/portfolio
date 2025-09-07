@@ -67,7 +67,9 @@
             <div class="lg:col-span-1">
                 <img src="me.png"
                     alt="Photo of a man (me) in an elevator taking a mirror selfie. He's wearing headphones, an orange/salmon colored t-shirt, khaki shorts, white crew socks, and dark slip-on shoes. The elevator has a modern design with mirrored walls, white interior panels, and what appears to be floor indicators with red numbers visible in the reflection. He's holding a phone to capture the photo."
-                    class="rounded-lg shadow-2xl shadow-cyan-900/20 object-cover w-full h-auto max-w-md mx-auto lg:max-w-none">
+                    class="rounded-lg shadow-2xl shadow-cyan-900/20 object-cover w-full
+            h-64 sm:h-96 lg:h-auto object-top
+            max-w-md mx-auto lg:max-w-none">
             </div>
 
             <div class="lg:col-span-2">
@@ -98,79 +100,111 @@
 
         <main class="mt-16 sm:mt-20 lg:mt-28">
 
-<section id="projects">
-    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-brand-accent-cyan">Projects</h2>
-    <div class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+            <section id="projects">
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-brand-accent-cyan">Projects</h2>
+                <div class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
 
-        <a href="#case-study"
-            class="block bg-slate-800/50 p-6 lg:p-8 rounded-lg border border-slate-700 hover:border-brand-accent-cyan transition-colors duration-300 group">
-            <h3
-                class="text-lg sm:text-xl lg:text-2xl font-heading text-slate-200 group-hover:text-brand-accent-cyan transition-colors duration-300">
-                Driving Adoption for Canada's COVID-19 Travel App (ArriveCAN)</h3>
-            <p class="mt-3 text-sm sm:text-base text-brand-muted">Led UX research to drive app adoption from 13% to
-                80% before it was mandatory. Overcame significant bureaucratic hurdles by using data from 1,700+
-                user surveys and usability testing to champion critical, user-focused improvements.</p>
-            <div class="mt-4 flex flex-wrap gap-2">
-                <span class="text-xs bg-cyan-900/50 text-brand-accent-cyan py-1 px-3 rounded-full">UX Research</span>
-                <span class="text-xs bg-slate-700 text-slate-300 py-1 px-3 rounded-full">User Testing</span>
-                <span class="text-xs bg-slate-700 text-slate-300 py-1 px-3 rounded-full">Data Analysis</span>
-                <span class="text-xs bg-slate-700 text-slate-300 py-1 px-3 rounded-full">Government UX</span>
-            </div>
-        </a>
+                    <a href="#case-study"
+                        class="block bg-slate-800/50 p-6 lg:p-8 rounded-lg border border-slate-700 hover:border-brand-accent-cyan transition-colors duration-300 group">
+                        <h3
+                            class="text-lg sm:text-xl lg:text-2xl font-heading text-slate-200 group-hover:text-brand-accent-cyan transition-colors duration-300">
+                            Driving Adoption for Canada's COVID-19 Travel App (ArriveCAN)</h3>
+                        <p class="mt-3 text-sm sm:text-base text-brand-muted">Led UX research to drive app adoption from
+                            13% to
+                            80% before it was mandatory. Overcame significant bureaucratic hurdles by using data from
+                            1,700+
+                            user surveys and usability testing to champion critical, user-focused improvements.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="text-xs bg-cyan-900/50 text-brand-accent-cyan py-1 px-3 rounded-full">UX
+                                Research</span>
+                            <span class="text-xs bg-slate-700 text-slate-300 py-1 px-3 rounded-full">User Testing</span>
+                            <span class="text-xs bg-slate-700 text-slate-300 py-1 px-3 rounded-full">Data
+                                Analysis</span>
+                            <span class="text-xs bg-slate-700 text-slate-300 py-1 px-3 rounded-full">Government
+                                UX</span>
+                        </div>
+                        <span
+                            class="mt-4 inline-block text-brand-accent-cyan font-semibold transition-colors duration-300 group-hover:underline">
+                            Read case study →
+                        </span>
+                    </a>
 
-        <a href="#comfyui-minimap"
-            class="block bg-slate-800/50 p-6 lg:p-8 rounded-lg border border-slate-700 hover:border-brand-accent-cyan transition-colors duration-300 group">
-            <h3
-                class="text-lg sm:text-xl lg:text-2xl font-heading text-slate-200 group-hover:text-brand-accent-cyan transition-colors duration-300">
-                ComfyUI Minimap: Simplifying AI Workflow Navigation</h3>
-            <p class="mt-3 text-sm sm:text-base text-brand-muted">Developed an open-source minimap plugin to solve
-                spatial navigation issues in a popular node-based AI interface. The community-adopted tool provides
-                essential context for complex workflows, inspired by RTS game design.</p>
-            <div class="mt-4 flex flex-wrap gap-2">
-                <span class="text-xs bg-cyan-900/50 text-brand-accent-cyan py-1 px-3 rounded-full">UX Design</span>
-                <span class="text-xs bg-slate-700 text-slate-300 py-1 px-3 rounded-full">JavaScript</span>
-                <span class="text-xs bg-slate-700 text-slate-300 py-1 px-3 rounded-full">Open Source</span>
-                <span class="text-xs bg-slate-700 text-slate-300 py-1 px-3 rounded-full">AI Tools</span>
-            </div>
-        </a>
+                    <a href="#comfyui-minimap"
+                        class="block bg-slate-800/50 p-6 lg:p-8 rounded-lg border border-slate-700 hover:border-brand-accent-cyan transition-colors duration-300 group">
+                        <h3
+                            class="text-lg sm:text-xl lg:text-2xl font-heading text-slate-200 group-hover:text-brand-accent-cyan transition-colors duration-300">
+                            ComfyUI Minimap: Simplifying AI Workflow Navigation</h3>
+                        <p class="mt-3 text-sm sm:text-base text-brand-muted">Developed an open-source minimap plugin to
+                            solve
+                            spatial navigation issues in a popular node-based AI interface. The community-adopted tool
+                            provides
+                            essential context for complex workflows, inspired by RTS game design.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="text-xs bg-cyan-900/50 text-brand-accent-cyan py-1 px-3 rounded-full">UX
+                                Design</span>
+                            <span class="text-xs bg-slate-700 text-slate-300 py-1 px-3 rounded-full">JavaScript</span>
+                            <span class="text-xs bg-slate-700 text-slate-300 py-1 px-3 rounded-full">Open Source</span>
+                            <span class="text-xs bg-slate-700 text-slate-300 py-1 px-3 rounded-full">AI Tools</span>
+                        </div>
+                        <span
+                            class="mt-4 inline-block text-brand-accent-cyan font-semibold transition-colors duration-300 group-hover:underline">
+                            View project details →
+                        </span>
+                    </a>
 
-        <a href="#image-sorter"
-            class="block bg-slate-800/50 p-6 lg:p-8 rounded-lg border border-slate-700 hover:border-brand-accent-cyan transition-colors duration-300 group">
-            <h3
-                class="text-lg sm:text-xl lg:text-2xl font-heading text-slate-200 group-hover:text-brand-accent-cyan transition-colors duration-300">
-                Image Sorter: Streamlining High-Volume Manual Tasks</h3>
-            <p class="mt-3 text-sm sm:text-base text-brand-muted">Built a custom Flask tool to accelerate the
-                manual sorting of thousands of images. The interface prioritizes keyboard shortcuts and
-                customizable workflows to reduce fatigue and errors in repetitive data classification tasks.</p>
-            <div class="mt-4 flex flex-wrap gap-2">
-                <span class="text-xs bg-cyan-900/50 text-brand-accent-cyan py-1 px-3 rounded-full">Tool
-                    Development</span>
-                <span class="text-xs bg-slate-700 text-slate-300 py-1 px-3 rounded-full">Python</span>
-                <span class="text-xs bg-slate-700 text-slate-300 py-1 px-3 rounded-full">Flask</span>
-                <span class="text-xs bg-slate-700 text-slate-300 py-1 px-3 rounded-full">Workflow Automation</span>
-            </div>
-        </a>
+                    <a href="#image-sorter"
+                        class="block bg-slate-800/50 p-6 lg:p-8 rounded-lg border border-slate-700 hover:border-brand-accent-cyan transition-colors duration-300 group">
+                        <h3
+                            class="text-lg sm:text-xl lg:text-2xl font-heading text-slate-200 group-hover:text-brand-accent-cyan transition-colors duration-300">
+                            Image Sorter: Streamlining High-Volume Manual Tasks</h3>
+                        <p class="mt-3 text-sm sm:text-base text-brand-muted">Built a custom Flask tool to accelerate
+                            the
+                            manual sorting of thousands of images. The interface prioritizes keyboard shortcuts and
+                            customizable workflows to reduce fatigue and errors in repetitive data classification tasks.
+                        </p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="text-xs bg-cyan-900/50 text-brand-accent-cyan py-1 px-3 rounded-full">Tool
+                                Development</span>
+                            <span class="text-xs bg-slate-700 text-slate-300 py-1 px-3 rounded-full">Python</span>
+                            <span class="text-xs bg-slate-700 text-slate-300 py-1 px-3 rounded-full">Flask</span>
+                            <span class="text-xs bg-slate-700 text-slate-300 py-1 px-3 rounded-full">Workflow
+                                Automation</span>
+                        </div>
+                        <span
+                            class="mt-4 inline-block text-brand-accent-cyan font-semibold transition-colors duration-300 group-hover:underline">
+                            Explore this project →
+                        </span>
+                    </a>
 
-        <a href="#data-strategy-website"
-            class="block bg-slate-800/50 p-6 lg:p-8 rounded-lg border border-slate-700 hover:border-brand-accent-cyan transition-colors duration-300 group">
-            <h3
-                class="text-lg sm:text-xl lg:text-2xl font-heading text-slate-200 group-hover:text-brand-accent-cyan transition-colors duration-300">
-                Data Strategy Website: From Concept to Launch</h3>
-            <p class="mt-3 text-sm sm:text-base text-brand-muted">Led the end-to-end creation of a government data
-                strategy website under a tight 3-week deadline. Managed stakeholders, designed UI/UX in Figma, and
-                developed the final static site, successfully launching a key public communication platform on
-                time.</p>
-            <div class="mt-4 flex flex-wrap gap-2">
-                <span class="text-xs bg-cyan-900/50 text-brand-accent-cyan py-1 px-3 rounded-full">Project
-                    Management</span>
-                <span class="text-xs bg-slate-700 text-slate-300 py-1 px-3 rounded-full">UX Design</span>
-                <span class="text-xs bg-slate-700 text-slate-300 py-1 px-3 rounded-full">Web Development</span>
-                <span class="text-xs bg-slate-700 text-slate-300 py-1 px-3 rounded-full">Stakeholder Management</span>
-            </div>
-        </a>
+                    <a href="#data-strategy-website"
+                        class="block bg-slate-800/50 p-6 lg:p-8 rounded-lg border border-slate-700 hover:border-brand-accent-cyan transition-colors duration-300 group">
+                        <h3
+                            class="text-lg sm:text-xl lg:text-2xl font-heading text-slate-200 group-hover:text-brand-accent-cyan transition-colors duration-300">
+                            Data Strategy Website: From Concept to Launch</h3>
+                        <p class="mt-3 text-sm sm:text-base text-brand-muted">Led the end-to-end creation of a
+                            government data
+                            strategy website under a tight 3-week deadline. Managed stakeholders, designed UI/UX in
+                            Figma, and
+                            developed the final static site, successfully launching a key public communication platform
+                            on
+                            time.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="text-xs bg-cyan-900/50 text-brand-accent-cyan py-1 px-3 rounded-full">Project
+                                Management</span>
+                            <span class="text-xs bg-slate-700 text-slate-300 py-1 px-3 rounded-full">UX Design</span>
+                            <span class="text-xs bg-slate-700 text-slate-300 py-1 px-3 rounded-full">Web
+                                Development</span>
+                            <span class="text-xs bg-slate-700 text-slate-300 py-1 px-3 rounded-full">Stakeholder
+                                Management</span>
+                        </div>
+                        <span
+                            class="mt-4 inline-block text-brand-accent-cyan font-semibold transition-colors duration-300 group-hover:underline">
+                            See the breakdown →
+                        </span>
+                    </a>
 
-    </div>
-</section>
+                </div>
+            </section>
 
             <section id="case-study" class="mt-16 sm:mt-20 lg:mt-28">
                 <h2 class="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-brand-accent-cyan">
@@ -231,7 +265,7 @@
 
                     <img src="image6.png"
                         alt="User distribution showing only 13% using the app, with 44% unaware of its existence"
-                        class="shadow-2xl shadow-cyan-900/20 h-auto max-w-2xl mb-6">
+                        class="shadow-2xl shadow-cyan-900/20 h-auto max-w-full mb-6" />
 
                     <div class="bg-slate-800/50 p-4 rounded-lg border-l-4 border-brand-accent-yellow mb-6">
                         <p class="text-sm sm:text-base text-brand-light">
@@ -243,11 +277,11 @@
                     </div>
 
                     <img src="image3.png" alt="Discovery channels showing 43.5% never learned about ArriveCAN"
-                        class="shadow-2xl shadow-cyan-900/20 h-auto max-w-2xl mb-6">
+                        class="shadow-2xl shadow-cyan-900/20 h-auto max-w-full mb-6">
 
                     <img src="image7.png"
                         alt="Reasons why app-aware users chose paper, with 'Paper seemed easier' at 39%"
-                        class="shadow-2xl shadow-cyan-900/20 h-auto max-w-2xl mb-6">
+                        class="shadow-2xl shadow-cyan-900/20 h-auto max-w-full mb-6">
 
                     <h3 class="text-lg sm:text-xl lg:text-2xl font-heading text-slate-200 mb-4">The Critical Issues I
                         Found (That Never Got Fixed)</h3>
@@ -375,7 +409,7 @@
 
                             <img src="image1.png"
                                 alt="screenshot of the minimap. Focus is on the corner of comfyui. Minimap shows notes and connections in a small, simplified window, and a rectangle showing your view on the workflow."
-                                class="shadow-2xl shadow-cyan-900/20 h-auto max-w-2xl mb-4">
+                                class="shadow-2xl shadow-cyan-900/20 h-auto max-w-full mb-6">
 
                             <div class="bg-slate-700/50 p-6 rounded-lg">
                                 <h4 class="text-brand-accent-yellow font-bold mb-3">Key Design Decisions</h4>
@@ -482,7 +516,7 @@
 
                             <img src="img-sort.png"
                                 alt="A screenshot displaying an image sorting interface showing a winter landscape artwork featuring a rocky island or outcrop with orange-brown stone formations crowned by dark evergreen trees and a tall stone tower structure, set against a bright blue sky with white clouds. In the foreground, white snow covers the ground with meandering blue water channels cutting through it. The right panel shows a dark interface for sorting image 3 of 401, with various category tags including 'Open with Photoshop,' 'General (Q),' 'Neednames (R),' 'inpaint needed (T),' and 'Needs work (W),' along with file path information indicating this is part of a batch processing workflow from August 2025."
-                                class="shadow-2xl shadow-cyan-900/20 h-auto max-w-2xl mb-4">
+                                class="shadow-2xl shadow-cyan-900/20 h-auto max-w-full mb-6">
 
                             <div class="bg-slate-700/50 p-6 rounded-lg">
                                 <h4 class="text-brand-accent-yellow font-bold mb-3">Key Design Decisions</h4>
@@ -564,7 +598,7 @@
                 </div>
             </section>
 
-            <section id="case-study" class="mt-16 sm:mt-20 lg:mt-28">
+            <section id="data-strategy-website" class="mt-16 sm:mt-20 lg:mt-28">
                 <h2 class="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-brand-accent-cyan">
                     Data Strategy Website: Making Strategy Documents People Actually Use</h2>
 
@@ -631,7 +665,7 @@
 
                     <img src="image5.png"
                         alt="A website screenshot showing the Public Health Agency of Canada's Data Strategy document layout. The page features a dark blue header with the title 'DATA STRATEGY' and subtitle 'Building a foundation for the future of public health data' alongside geometric icons representing databases and buildings. The main content area has a teal gradient background and is divided into three main sections: Overview, Elements, and Implementation Plan. Each section contains placeholder Lorem ipsum text. On the right side is a vertical navigation menu with icons and labels including Intro, Vision, What We Heard, and Targets. The overall design uses a modern blue and teal color scheme with clean typography and geometric design elements throughout."
-                        class="shadow-2xl shadow-cyan-900/20 h-auto max-w-2xl">
+                        class="shadow-2xl shadow-cyan-900/20 h-auto max-w-full mb-6">
                     <p class="text-xs text-slate-400 italic mb-6">Note: this was an early draft before we made the text
                         accessible, the background is obviously too bright. I fixed that in the final version, I just
                         couldn't find a better screenshot! They made a new strategy years later, and it was a
@@ -684,7 +718,7 @@
             </section>
 
 
-            <section id="contact" class="mt-16 sm:mt-20 lg:mt-28 text-center">
+            <section id="contact" class="mt-96 mb-32 sm:mt-16 lg:mt-28 text-center">
                 <h2 class="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-brand-accent-cyan">Contact</h2>
                 <p class="mt-4 max-w-2xl mx-auto text-sm sm:text-base lg:text-lg">
                     I'm always interested in new projects and collaborations. If you'd like to discuss an opportunity or
